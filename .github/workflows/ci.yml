@@ -36,7 +36,7 @@ jobs:
   deploy_dev:
     name: Deploy dev
     needs: build
-    uses: ./.github/workflows/step-deploy.yml
+    uses: mucalytic/GitHub.Actions.Reusable/.github/workflows/step-deploy.yml@main
     with:
       env: dev
     secrets: inherit
@@ -44,7 +44,7 @@ jobs:
   deploy_prod:
     name: Deploy prod
     needs: deploy_dev
-    uses: ./.github/workflows/step-deploy.yml
+    uses: mucalytic/GitHub.Actions.Reusable/.github/workflows/step-deploy.yml@main
     with:
       env: prod
     secrets: inherit
